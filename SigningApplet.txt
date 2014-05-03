@@ -1,0 +1,15 @@
+
+
+   jar cf  BrowseApplet.jar BrowseApplet.class
+
+   keytool -genkey -keystore myKeyStore -alias me
+
+     //enter password and all details
+   
+    keytool -selfcert -keystore myKeyStore -alias me
+
+   jarsigner -keystore myKeyStore BrowseApplet.jar me
+
+     //run the applet in browser
+
+  
